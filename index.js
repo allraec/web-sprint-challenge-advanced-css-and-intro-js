@@ -209,10 +209,31 @@ const artists = [
 (2) Bio of the third artist (2nd index) in the array */
 
 
+console.log("*****TASK 1*****");
+console.log("");
+
+//TASK 1 CODE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+console.log(artists[0].name); //(1) Should print out "Amedeo Modigliani".
+console.log("");
+console.log(artists[2].bio); //(2) Should print out "Diego María's bio".
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+console.log("");
+
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
+console.log("*****TASK 2*****");
+console.log("");
 
+//TASK 2 CODE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+artists[8].name = "Vincent Van Gogh";
+console.log([artists[8].name]);
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+console.log("");
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -222,20 +243,41 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
-  }
-  
-  /**
 
+console.log("*****TASK 3*****");
+console.log("");
+
+//TASK 3 CODE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function getArtistByIndex(id, name) {
+    return `The artist at index ${id} is ${name[id].name}`;
+}
+console.log(getArtistByIndex(0,artists));
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+console.log("");
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1900-2000) */
 
-function get20s(/* Code here */){
+console.log("*****TASK 4*****"); 
+console.log("");
 
-  /* Code here */
-
+//TASK 4 CODE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function get20s(data){
+    let born20th = [];
+    for(i = 0; i < data.length; i++){
+        let yearBorn = Number(data[i].years.substr(0,4));
+        if(yearBorn >= 1900){
+            born20th.push(data[i].name);
+        }
+    }
+    return born20th;
 }
+console.log(get20s(artists));
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+console.log("");
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -248,12 +290,20 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
-  }
-  
-  /**
+console.log("*****TASK 5*****");
+console.log("");
 
+//TASK 5 CODE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function removeArtist(data, index) {
+    data.splice(index,1);
+    return data.length;
+  }
+console.log(removeArtist(artists, 0));
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+artists.unshift({"id": 0,"name": "Amedeo Modigliani","years": "1884 - 1920","genre": "Expressionism","nationality": "Italian","bio": "Amedeo Clemente Modigliani (Italian pronunciation: [ameˈdɛːo modiʎˈʎaːni]; 12 July 1884 – 24 January 1920) was an Italian Jewish painter and sculptor who worked mainly in France. He is known for portraits and nudes in a modern style characterized by elongation of faces, necks, and figures that were not received well during his lifetime but later found acceptance. Modigliani spent his youth in Italy, where he studied the art of antiquity and the Renaissance. In 1906 he moved to Paris, where he came into contact with such artists as Pablo Picasso and Constantin Brâncuși. By 1912 Modigliani was exhibiting highly stylized sculptures with Cubists of the Section d'Or group at the Salon d'Automne.","wikipedia": "http://en.wikipedia.org/wiki/Amedeo_Modigliani","paintings": 193});
+console.log("");
 
 
 
@@ -269,11 +319,22 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should console.log() the new array with information added"*/
 
-function addArtist(/* Code here */){
+console.log("*****TASK 6*****");
+console.log("");
 
-    /* Code here */
+//TASK 6 CODE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function addArtist(artists,artistObj){
 
-  }
+  artists.push(artistObj);
+  return artists;
+}
+
+let newArtistList = addArtist(artists, {id:20, name:"Allison Castaneda", years:"1992 - 2020", genre:"Web Design", nationality:"American", bio:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus eleifend tellus vel tristique. Duis nulla sem, consequat ac diam at, malesuada faucibus eros. In iaculis suscipit sapien in lacinia. Aenean eros eros, ullamcorper id diam sed, auctor interdum urna. Donec porta ultrices felis quis tempus. Mauris a pharetra dolor, at rutrum erat. Phasellus convallis enim vel venenatis tempor. Phasellus ac dolor sodales, tempor libero malesuada, finibus lorem. Etiam vel magna feugiat, fermentum arcu sed, sollicitudin magna. Donec at neque nec orci gravida sollicitudin. Etiam eget mauris odio."});
+console.log(newArtistList);
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+console.log("");
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -283,11 +344,22 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
+console.log("*****TASK 7*****");
+console.log("");
 
-  /* Code here */
-
+//TASK 7 CODE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function lotsOfArt(artists){
+  let manyArts = []
+  for(i=0; i<artists.length; i++){
+    if(artists[i].paintings > 100){
+      manyArts.push(artists[i].name);
+    }
+  }
+  return manyArts;
 }
+
+console.log(lotsOfArt(artists));
 
 
 
