@@ -150,6 +150,10 @@ button:hover{
         background-size: cover;
     }
 
+    nav{
+        width: 35%;
+        text-align: justify;
+    }
     nav a{
         font-size: 1.5rem;
     }
