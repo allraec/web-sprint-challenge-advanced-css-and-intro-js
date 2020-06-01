@@ -23,10 +23,34 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. How would you describe preprocessing to someone new to CSS?
+_________________________________________________________________________________________________________________________________________
+
++ Preprocessing is basically using a preprocessor, a program like SASS/LESS, that converts code to CSS. By using preprocessors, it makes it easier for programmers to construct their code in an organized fashion.
+_________________________________________________________________________________________________________________________________________
+
 2. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+___________________________________________________________________________________________________________________________
+
++ My favorite is variable usage. I love how I can just create a variable for hex codes and use the variable all throughout.
+___________________________________________________________________________________________________________________________
+
 3. How would you explain the concept of a variable to someone new to programming?
+____________________________________________________________________________________________________________________________________
+
++ A variable is like a container of a value. It can be a number or text and such. You label it with a name. You can choose to forget about it or you can grab it use it's content.
+____________________________________________________________________________________________________________________________________
+
 4. What is the purpose of using functions in code?
+______________________________________________________________________________________________________________________________
+
++ Function is a block of reusable code that accomplishes a specific task. It takes in data, processes it and returns a result.
+______________________________________________________________________________________________________________________________
+
 5. What is JSON data?
+________________________________________________________________________________________________________
+
++ It is a text data that can be transferred to server to and from with JavaScript Objects as the format.
+________________________________________________________________________________________________________
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
