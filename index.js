@@ -330,7 +330,7 @@ function addArtist(artists,artistObj){
   return artists;
 }
 
-let newArtistList = addArtist(artists, {id:20, name:"Allison Castaneda", years:"1992 - 2020", genre:"Web Design", nationality:"American", bio:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus eleifend tellus vel tristique. Duis nulla sem, consequat ac diam at, malesuada faucibus eros. In iaculis suscipit sapien in lacinia. Aenean eros eros, ullamcorper id diam sed, auctor interdum urna. Donec porta ultrices felis quis tempus. Mauris a pharetra dolor, at rutrum erat. Phasellus convallis enim vel venenatis tempor. Phasellus ac dolor sodales, tempor libero malesuada, finibus lorem. Etiam vel magna feugiat, fermentum arcu sed, sollicitudin magna. Donec at neque nec orci gravida sollicitudin. Etiam eget mauris odio."});
+let newArtistList = addArtist(artists, {id:20, name:"Allison Castaneda", years:"1992 - present", genre:"Web Design", nationality:"American", bio:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rhoncus eleifend tellus vel tristique. Duis nulla sem, consequat ac diam at, malesuada faucibus eros. In iaculis suscipit sapien in lacinia. Aenean eros eros, ullamcorper id diam sed, auctor interdum urna. Donec porta ultrices felis quis tempus. Mauris a pharetra dolor, at rutrum erat. Phasellus convallis enim vel venenatis tempor. Phasellus ac dolor sodales, tempor libero malesuada, finibus lorem. Etiam vel magna feugiat, fermentum arcu sed, sollicitudin magna. Donec at neque nec orci gravida sollicitudin. Etiam eget mauris odio."});
 console.log(newArtistList);
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 artists.pop();
